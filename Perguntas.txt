@@ -1,0 +1,141 @@
+Questão 1.
+
+Você ingressa em uma empresa que possui um aplicativo de consulta de produtos. O aplicativo envia um código a outro processo, que pesquisa o produto e devolve a descrição. Ao documentar a comunicação, você deve indicar quem inicia a solicitação e quem oferece o serviço. Esses papéis pertencem, respectivamente,
+
+Resposta: C) ao cliente e ao servidor.
+
+----
+
+Questão 2.
+
+Em uma empresa de logística, todos os terminais consultam um único processo para registrar entregas. Esse processo parou, e nenhum terminal conseguiu concluir os registros. O gestor pede que você identifique a causa arquitetural da interrupção generalizada.
+
+Resposta: A) a dependência de um único serviço, que constitui um ponto único de falha.
+
+----
+
+Questão 3.
+
+Você recebe um programa cliente que deve acessar um serviço em 192.168.1.20. No mesmo computador existem várias aplicações aguardando solicitações. Para direcionar a conexão à aplicação correta, o cliente precisa conhecer também:
+
+Resposta: E) o número da porta utilizada pelo serviço.
+
+----
+
+Questão 4.
+
+Uma empresa vai transmitir solicitações de compra entre dois processos. Para esse fluxo, a equipe prioriza a entrega ordenada dos dados e deseja estabelecer uma conexão antes da troca de informações.
+
+Resposta: B) TCP, porque oferece comunicação orientada à conexão e entrega ordenada.
+
+----
+
+Questão 5.
+
+Um sistema envia periodicamente medições de sensores. A empresa considera aceitável perder uma medição isolada, porque uma nova será enviada logo depois.
+
+Resposta: D) Usar UDP e tratar na aplicação as perdas que forem relevantes.
+
+----
+
+Questão 6.
+
+Ao chegar a uma equipe, você observa que um cliente TCP tenta fazer uma consulta, mas o servidor não foi iniciado.
+
+Resposta: C) iniciar o servidor na porta esperada e depois executar o cliente.
+
+----
+
+Questão 7.
+
+A empresa recebeu dois programas: um servidor TCP e um cliente. O servidor deve responder à solicitação recebida.
+
+Resposta: A) O servidor aguarda a conexão, recebe a solicitação, processa os dados e envia a resposta.
+
+----
+
+Questão 8.
+
+Em um teste com UDP, o cliente envia um datagrama, mas não recebe resposta.
+
+Resposta: E) o envio por UDP, por si só, não garante que o datagrama chegue nem que haja resposta.\
+
+----
+
+Questão 9.
+
+Dois setores desenvolveram separadamente o cliente e o servidor de uma aplicação. O cliente envia os campos codigo e quantidade, enquanto o servidor interpreta a mensagem como quantidade e codigo.
+
+Resposta: B) Acordar e documentar o formato da mensagem entre as duas equipes.
+
+----
+
+Questão 10.
+
+Uma empresa utiliza sockets para solicitar operações matemáticas a um servidor. Os desenvolvedores precisam escrever repetidamente código para montar mensagens, enviá-las e interpretar os resultados.
+
+Resposta: D) oferece ao cliente uma forma de invocar operações remotas semelhante à chamada de métodos.
+
+----
+
+Questão 11.
+
+Você analisa um serviço RPC no qual o cliente executa servidor.consultar(15).
+
+Resposta: C) O cliente solicitou a operação e o servidor a executou antes de devolver o resultado.
+
+----
+
+Questão 12.
+
+Uma equipe testa uma aplicação RPC. O gerente conclui que, como o código do cliente se parece com uma chamada de função, a aplicação pode ignorar a possibilidade de demora ou falha na comunicação.
+
+Resposta: A) A chamada depende da rede e do servidor; o cliente deve considerar atrasos e indisponibilidade.
+
+----
+
+Questão 13.
+
+Na manutenção de um servidor RPC, você adicionou uma função que consulta o saldo de um produto. O cliente tenta chamá-la, mas recebe a indicação de que a operação não está disponível.
+
+Resposta: E) a função foi registrada como operação do servidor e o processo foi reiniciado após a mudança.
+
+----
+
+Questão 14.
+
+Uma aplicação RPC precisa enviar os valores de uma operação para outro processo. Antes de atravessarem a rede, os parâmetros são convertidos para uma representação transmissível.
+
+Resposta: B) serialização dos dados.
+
+----
+
+Questão 15.
+
+O servidor RPC funcionava no mesmo computador do cliente. A equipe move o servidor para outra máquina, mas deixa no cliente o endereço localhost.
+
+Resposta: D) indicar no cliente o endereço alcançável da máquina que executa o servidor e a porta do serviço.
+
+----
+
+Questão 16.
+
+Uma empresa possui um menu no cliente para escolher entre operações remotas de soma e multiplicação.
+
+Resposta: C) o cliente recebe a escolha do usuário e solicita ao servidor a execução da operação.
+
+----
+
+Questão 17.
+
+Durante um teste, você encerra um servidor RPC e tenta executar novamente o cliente.
+
+Resposta: A) A aparência de uma chamada de função não elimina a dependência do serviço remoto.
+
+----
+
+Questão 18.
+
+Você precisa explicar por que uma chamada remota deve ter cuidados diferentes de uma função executada no próprio processo.
+
+Resposta: E) A chamada remota envolve comunicação e pode ser afetada por falhas ou atrasos fora do processo cliente.
