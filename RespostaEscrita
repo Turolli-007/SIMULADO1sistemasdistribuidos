@@ -1,0 +1,26 @@
+Questão 19 
+
+Você começa a trabalhar em uma empresa cujo serviço de consulta de produtos atende vários computadores. Durante um teste, o programa cliente não recebe resposta. Apresente uma sequência de verificações para investigar o problema.
+
+----
+
+Primeiramente deve ser verificado se o processo servidor está em execução. Depois, deve-se conferir se o endereço utilizado pelo cliente está correto e se aponta para a máquina onde o servidor está funcionando. Em seguida, deve-se verificar se a porta configurada no cliente é a mesma utilizada pelo servidor.
+
+Após essas verificações, deve-se analisar se a mensagem enviada pelo cliente chegou ao servidor e se a resposta foi enviada corretamente.
+
+Verificar a comunicação antes de alterar o cálculo ajuda a identificar se o problema está na conexão, endereço ou porta, evitando modificar uma parte do sistema que talvez esteja funcionando corretamente.
+
+----
+
+
+Questão 20 
+
+Uma empresa deseja substituir parte do código de comunicação por sockets de uma aplicação por chamadas RPC. Explique o que a RPC simplifica e quais cuidados ainda devem existir.
+
+----
+
+A RPC simplifica o desenvolvimento porque permite que o cliente faça chamadas de operações remotas de forma semelhante a uma chamada de função local, sem precisar programar manualmente todo o envio e recebimento das mensagens.
+
+O funcionamento ocorre quando o cliente envia os parâmetros da operação, que são serializados e enviados pela rede para o servidor. O servidor recebe os dados, executa a operação e devolve o resultado ao cliente.
+
+Mesmo usando RPC, ainda é necessário considerar problemas como atrasos na rede, falhas de comunicação e indisponibilidade do servidor, pois a operação continua dependendo de um serviço remoto.
